@@ -1,0 +1,7 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+<p><strong>Title:</strong> {{studio.title}} </p>
+<p><strong>Prefix:</strong> {{ studio.prefix }}</p>
+<p><strong>Website:</strong><a href="{{ studio.website }}">{{studio.website}}</a></p>
+{% endblock %}

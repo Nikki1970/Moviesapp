@@ -36,3 +36,16 @@ def detail_director(request, pk):
         'director' : director
     }
     return render(request, 'Moviesapp/director_detail.html', context=context)
+
+
+class StudioListView(generic.ListView):
+    model = Studio
+    template = "Moviesapp/studio_list.html"
+
+
+def detail_studio(request, slug):
+    studio = get_object_or_404(Studio, slug=slug)
+    context = {
+        'studio' : studio
+    }
+    return render(request, 'Moviesapp/studio_detail.html', context=context)

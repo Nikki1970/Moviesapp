@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<div class="container">
+  {% if movies %}
+  <table style="width:15%; padding:30px; text-align:center;" class="table table-light table-hover table-bordered"
+    align="center">
+    <tr>
+      <th>Movie Name</th>
+    </tr>
+    {% for movie in movies %}
+    <tr>
+      <td><a href="" class="btn btn-dark btn-sm">{{movie}}</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p>There are no Movies.</p>
+  {% endif %}
+</div>
+{% endblock %}

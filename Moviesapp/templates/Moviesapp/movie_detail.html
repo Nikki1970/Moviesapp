@@ -1,0 +1,29 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+  <h1>Title: {{ movie.title }}</h1>
+  <p><strong>Name:</strong>{{ movie.title }}</p> 
+  <p><strong>Prefix:</strong> {{ movie.prefix }}</p>
+  <p><strong>Subtitle:</strong>{{ movie.subtitle }}</p>
+  <p><strong>Directors:</strong>
+    <ul>
+        {% for director in movie.directors.all %}
+        <li>
+        <p>{{ director }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+  </p>
+  <p><strong>Studio:</strong>{{ movie.studio }}</p>
+  <p><strong>Image:</strong><img src="{% static image_name %}" width="50%" height="50%"></p>
+  <p><strong>Genre:</strong>
+    <ul>
+        {% for genre in movie.genre.all %}
+        <li>
+        <p>{{ genre }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+  <p><strong>Review:</strong>{{ movie.review }}</p>
+  <p><strong>Released Date:</strong>{{ movie.released_date }}</p>
+ {% endblock %}

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from Moviesapp.models import Movie, Genre, Director, Studio
 from django.views import generic
 # Create your views here.
@@ -8,4 +8,11 @@ def list_movie(request):
     context = {
         'movies' : movie
     }
-    return render(request,'Moviesapp/movie_list.html', context= context)
+    return render(request,'Moviesapp/movie_list.html', context=context)
+
+def detail_movie(request, slug):
+    movie = get_object_or_404(Movie, slug=slug)
+    context = {
+        'movie':movie
+    }
+    return render(request,'Moviesapp/movie_detail.html', context=context)

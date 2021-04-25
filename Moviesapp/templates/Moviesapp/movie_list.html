@@ -9,7 +9,7 @@
     </tr>
     {% for movie in movies %}
     <tr>
-      <td><a href="" class="btn btn-dark btn-sm">{{movie}}</a></td>
+      <td><a href="{% url 'movie-detail' movie.slug %}" class="btn btn-dark btn-sm">{{movie}}</a></td>
     </tr>
     {% endfor %}
   </table>

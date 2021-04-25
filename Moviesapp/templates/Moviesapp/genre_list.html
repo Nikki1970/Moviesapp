@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<div class="container">
+ 
+  <table style="width:15%; padding:30px; text-align:center;" class="table table-light table-hover table-bordered"
+    align="center">
+    <tr>
+      <th>Genres</th>
+    </tr>
+    {% for genre in genre_list %}
+    <tr>
+      <td><a href="" class="btn btn-dark btn-sm">{{ genre }}</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  
+</div>
+{% endblock %}

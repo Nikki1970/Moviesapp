@@ -10,9 +10,16 @@ def list_movie(request):
     }
     return render(request,'Moviesapp/movie_list.html', context=context)
 
+
 def detail_movie(request, slug):
     movie = get_object_or_404(Movie, slug=slug)
     context = {
         'movie':movie
     }
     return render(request,'Moviesapp/movie_detail.html', context=context)
+
+
+class GenreListView(generic.ListView):
+    model = Genre
+
+

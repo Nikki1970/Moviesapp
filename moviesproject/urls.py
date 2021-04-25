@@ -22,6 +22,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Movies/',include('Moviesapp.urls')),
-    path('', RedirectView.as_view(url='Movies/')),
+    path('Moviesapp/',include('Moviesapp.urls')),
+    path('', RedirectView.as_view(url='Moviesapp/')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

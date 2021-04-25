@@ -29,3 +29,10 @@ def list_director(request):
     }
     return render(request, 'Moviesapp/director_list.html', context=context)
 
+
+def detail_director(request, pk):
+    director = get_object_or_404(Director, id=pk)
+    context = {
+        'director' : director
+    }
+    return render(request, 'Moviesapp/director_detail.html', context=context)

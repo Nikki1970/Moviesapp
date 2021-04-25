@@ -9,7 +9,7 @@
     </tr>
     {% for director in directors %}
     <tr>
-      <td><a href="" class="btn btn-dark btn-sm">{{director}}</a></td>
+      <td><a href="{% url 'director-detail' director.pk %}" class="btn btn-dark btn-sm">{{director}}</a></td>
     </tr>
     {% endfor %}
   </table>

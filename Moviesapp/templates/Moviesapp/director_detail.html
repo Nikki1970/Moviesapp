@@ -1,0 +1,9 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+  <p><strong>Name:</strong> {{ director.first_name }} {{director.middle_name}}{{director.last_name}}</p> 
+  <p><strong>Phone Number:</strong> {{ director.phone_number }}</p>
+  <p><strong>Birth date:</strong>{{ director.birth_date }}</p>
+  <p><strong>Gender:</strong>{{ director.gender }}</p>
+  <p><strong>Website:</strong><a href="{{ director.website }}">About the Director</a></p>
+ {% endblock %}

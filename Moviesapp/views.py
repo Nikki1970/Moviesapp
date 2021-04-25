@@ -22,4 +22,10 @@ def detail_movie(request, slug):
 class GenreListView(generic.ListView):
     model = Genre
 
+def list_director(request):
+    director = Director.objects.all()
+    context = {
+        'directors' : director 
+    }
+    return render(request, 'Moviesapp/director_list.html', context=context)
 

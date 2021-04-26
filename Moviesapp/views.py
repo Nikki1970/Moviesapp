@@ -49,3 +49,10 @@ def detail_studio(request, slug):
         'studio' : studio
     }
     return render(request, 'Moviesapp/studio_detail.html', context=context)
+
+def genre_movies(request,pk):
+    genre_movies = Movie.objects.filter(genre=pk)
+    context = {
+        'genre_movies' : genre_movies
+    }
+    return render(request, 'Moviesapp/genre_movies.html', context=context)

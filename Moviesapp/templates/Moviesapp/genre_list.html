@@ -1,6 +1,6 @@
 {% extends "base_generic.html" %}
 {% block content %}
-<div class="container">
+<div class="container p-3" >
  
   <table style="width:15%; padding:30px; text-align:center;" class="table table-light table-hover table-bordered"
     align="center">
@@ -9,7 +9,7 @@
     </tr>
     {% for genre in genre_list %}
     <tr>
-      <td><a href="" class="btn btn-dark btn-sm">{{ genre }}</a></td>
+      <td><a href="{% url 'genre-movies' genre.pk %}" class="btn btn-dark btn-sm">{{ genre }}</a></td>
     </tr>
     {% endfor %}
   </table>

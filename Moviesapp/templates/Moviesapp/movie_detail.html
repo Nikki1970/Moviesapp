@@ -9,7 +9,7 @@
     <ul>
         {% for director in movie.directors.all %}
         <li>
-        <p>{{ director }}</p>
+        <p><a href="{% url 'director-detail' movie.pk %}">{{ director }}</a></p>
         </li>
         {% endfor %}
     </ul>
@@ -20,7 +20,7 @@
     <ul>
         {% for genre in movie.genre.all %}
         <li>
-        <p>{{ genre }}</p>
+        <p>{{ genre }}</a></p>
         </li>
         {% endfor %}
     </ul>
